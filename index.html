@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For MISTIII 🦋❤️</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #fff;
+    color: #222;
+    font-family: Georgia, serif;
+    overflow: hidden;
+}
+
+.screen {
+    min-height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+    position: relative;
+}
+
+.screen.active {
+    display: flex;
+}
+
+.content {
+    max-width: 700px;
+    position: relative;
+    z-index: 5;
+    animation: fadeIn 1.5s ease;
+}
+
+h1 {
+    font-size: clamp(38px, 10vw, 70px);
+    margin: 15px 0;
+}
+
+h2 {
+    font-size: clamp(27px, 7vw, 48px);
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+button {
+    margin-top: 25px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    background: #222;
+    color: white;
+    font-size: 16px;
+}
+
+.butterfly {
+    font-size: 55px;
+    animation: butterfly 3s ease-in-out infinite;
+}
+
+@keyframes butterfly {
+    0%,100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.heart {
+    font-size: 90px;
+    animation: heartbeat 1.2s infinite;
+}
+
+@keyframes heartbeat {
+    0%,100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+#countdown {
+    font-size: clamp(30px, 8vw, 55px);
+    font-weight: bold;
+    margin: 25px 0;
+}
+
+.date {
+    letter-spacing: 5px;
+    font-size: 15px;
+}
+
+#memoryScreen {
+    background: linear-gradient(#eef5f9, #fff);
+}
+
+.raindrop {
+    position: absolute;
+    top: -40px;
+    width: 2px;
+   
