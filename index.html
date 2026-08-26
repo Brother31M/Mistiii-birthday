@@ -2,113 +2,906 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For MISTIII 🦋❤️</title>
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Cake Time 🎂</title>
 
 <style>
-* {
-    box-sizing: border-box;
+
+*{
+    box-sizing:border-box;
 }
 
-body {
-    margin: 0;
-    min-height: 100vh;
-    background: #fff;
-    color: #222;
-    font-family: Georgia, serif;
-    overflow: hidden;
+body{
+    margin:0;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#e9e7ee;
+
+    font-family:Georgia, "Times New Roman", serif;
+
+    overflow:hidden;
 }
 
-.screen {
-    min-height: 100vh;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 25px;
-    position: relative;
+
+/* Main Phone */
+
+.phone{
+    width:min(92vw,430px);
+    height:min(94vh,850px);
+
+    border:6px solid #151318;
+    border-radius:38px;
+
+    overflow:hidden;
+
+    background:linear-gradient(
+        180deg,
+        #fbdce8,
+        #ffeaf3
+    );
+
+    position:relative;
+
+    box-shadow:
+        0 20px 55px #aaa;
 }
 
-.screen.active {
-    display: flex;
+
+/* Page */
+
+.page{
+    width:100%;
+    height:100%;
+
+    overflow:auto;
+
+    padding:48px 24px 28px;
+
+    text-align:center;
 }
 
-.content {
-    max-width: 700px;
-    position: relative;
-    z-index: 5;
-    animation: fadeIn 1.5s ease;
+
+/* Heading */
+
+.top{
+    font-size:42px;
 }
 
-h1 {
-    font-size: clamp(38px, 10vw, 70px);
-    margin: 15px 0;
+h1{
+    margin:0;
+
+    color:#d85d82;
+
+    font-size:31px;
 }
 
-h2 {
-    font-size: clamp(27px, 7vw, 48px);
+.sub{
+    margin:9px 0 25px;
+
+    font-size:16px;
 }
 
-p {
-    font-size: 18px;
-    line-height: 1.8;
+
+/* Card */
+
+.card{
+    background:rgba(255,255,255,.82);
+
+    border-radius:30px;
+
+    padding:28px 18px 25px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(150,80,110,.12);
 }
 
-button {
-    margin-top: 25px;
-    padding: 14px 28px;
-    border: none;
-    border-radius: 30px;
-    background: #222;
-    color: white;
-    font-size: 16px;
+.label{
+    font-size:12px;
+
+    letter-spacing:4px;
+
+    color:#9b7b87;
+
+    font-weight:bold;
 }
 
-.butterfly {
-    font-size: 55px;
-    animation: butterfly 3s ease-in-out infinite;
+.instruction{
+    font-size:18px;
+
+    font-weight:bold;
+
+    margin:10px 0 7px;
 }
 
-@keyframes butterfly {
-    0%,100% {
-        transform: translateY(0);
+.small{
+    font-size:15px;
+
+    line-height:1.35;
+
+    margin-bottom:18px;
+}
+
+
+/* Cake Area */
+
+.cake-area{
+
+    height:275px;
+
+    position:relative;
+
+    touch-action:none;
+
+    user-select:none;
+
+    cursor:crosshair;
+}
+
+
+/* Plate */
+
+.plate{
+
+    position:absolute;
+
+    left:50%;
+    bottom:8px;
+
+    transform:translateX(-50%);
+
+    width:300px;
+    height:24px;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:
+        0 7px 15px
+        rgba(100,50,70,.15);
+}
+
+
+/* Cake */
+
+.cake{
+
+    position:absolute;
+
+    left:50%;
+    top:72px;
+
+    transform:translateX(-50%);
+
+    width:285px;
+    height:150px;
+}
+
+
+/* Cake Layers */
+
+.layer{
+
+    position:absolute;
+
+    left:0;
+
+    width:100%;
+    height:55px;
+
+    border-radius:
+        14px 14px 20px 20px;
+
+    background:
+        linear-gradient(
+            #ff6d9d,
+            #ed3e72
+        );
+
+    box-shadow:
+        inset 0 -8px 0
+        rgba(160,20,65,.13);
+}
+
+.layer.one{
+    bottom:0;
+}
+
+.layer.two{
+    bottom:43px;
+
+    transform:scale(.98);
+}
+
+.layer.three{
+    bottom:86px;
+
+    transform:scale(.96);
+}
+
+
+/* Icing */
+
+.icing{
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:57px;
+
+    border-radius:
+        50% 50% 18px 18px;
+
+    background:#fff8fb;
+
+    border:3px solid #f6b3c8;
+
+    box-shadow:
+        0 5px 0 #f5b1c5;
+}
+
+
+/* Drips */
+
+.drip{
+
+    position:absolute;
+
+    top:34px;
+
+    width:42px;
+    height:38px;
+
+    background:#fff8fb;
+
+    border-radius:
+        0 0 22px 22px;
+}
+
+.d1{
+    left:28px;
+}
+
+.d2{
+    left:118px;
+
+    height:48px;
+}
+
+.d3{
+    right:28px;
+
+    height:43px;
+}
+
+
+/* Candle */
+
+.candle{
+
+    position:absolute;
+
+    left:50%;
+    top:-43px;
+
+    transform:translateX(-50%);
+
+    width:13px;
+    height:55px;
+
+    border-radius:8px;
+
+    background:
+        repeating-linear-gradient(
+            135deg,
+            #fff 0 7px,
+            #f39ab8 7px 13px
+        );
+
+    z-index:5;
+}
+
+
+/* Flame */
+
+.flame{
+
+    position:absolute;
+
+    left:50%;
+    top:-30px;
+
+    transform:translateX(-50%);
+
+    width:19px;
+    height:29px;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            #fff36a,
+            #ff9c28
+        );
+
+    box-shadow:
+        0 0 25px #ffb52e;
+
+    animation:
+        flicker .55s infinite alternate;
+}
+
+
+@keyframes flicker{
+
+    from{
+        transform:
+            translateX(-50%)
+            scale(.9)
+            rotate(-3deg);
     }
-    50% {
-        transform: translateY(-15px);
+
+    to{
+        transform:
+            translateX(-50%)
+            scale(1.08)
+            rotate(4deg);
     }
 }
 
-.heart {
-    font-size: 90px;
-    animation: heartbeat 1.2s infinite;
+
+/* Cut Line */
+
+.cut-line{
+
+    position:absolute;
+
+    left:50%;
+    top:12px;
+
+    width:4px;
+    height:150px;
+
+    transform:translateX(-50%);
+
+    border-left:
+        3px dashed
+        rgba(220,80,125,.45);
 }
 
-@keyframes heartbeat {
-    0%,100% {
-        transform: scale(1);
+
+/* Progress */
+
+.progress-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    font-size:14px;
+
+    color:#8b6875;
+
+    margin-top:4px;
+}
+
+.percent{
+
+    font-weight:bold;
+
+    color:#d54d79;
+}
+
+.bar{
+
+    height:7px;
+
+    background:#f1d8e2;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    margin-top:8px;
+}
+
+.fill{
+
+    height:100%;
+
+    width:0%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f59ab9,
+            #d93470
+        );
+
+    border-radius:20px;
+
+    transition:
+        width .12s linear;
+}
+
+.hint{
+
+    margin-top:15px;
+
+    font-size:13px;
+
+    color:#9c7583;
+}
+
+
+/* Final Screen */
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+        rgba(255,225,237,.94);
+
+    z-index:20;
+
+    text-align:center;
+
+    padding:28px;
+}
+
+.overlay.show{
+    display:flex;
+}
+
+.wish{
+    animation:
+        pop .65s ease both;
+}
+
+@keyframes pop{
+
+    from{
+        transform:scale(.6);
+        opacity:0;
     }
-    50% {
-        transform: scale(1.2);
+
+    to{
+        transform:scale(1);
+        opacity:1;
     }
 }
 
-#countdown {
-    font-size: clamp(30px, 8vw, 55px);
-    font-weight: bold;
-    margin: 25px 0;
+.wish .big{
+    font-size:62px;
 }
 
-.date {
-    letter-spacing: 5px;
-    font-size: 15px;
+.wish h2{
+
+    color:#d83f72;
+
+    font-size:34px;
+
+    margin:10px 0;
 }
 
-#memoryScreen {
-    background: linear-gradient(#eef5f9, #fff);
+.wish p{
+
+    font-size:17px;
+
+    line-height:1.5;
 }
 
-.raindrop {
-    position: absolute;
-    top: -40px;
-    width: 2px;
-   
+button{
+
+    border:0;
+
+    border-radius:30px;
+
+    padding:13px 25px;
+
+    background:#df4f7e;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:bold;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<div class="phone">
+
+    <div class="page">
+
+        <div class="top">
+            🥺💗
+        </div>
+
+        <h1>
+            Cake Time
+        </h1>
+
+        <div class="sub">
+            Cut the cake and make a wish
+        </div>
+
+
+        <div class="card">
+
+            <div class="label">
+                DRAG HERE
+            </div>
+
+            <div class="instruction">
+                Drag across the cake to cut it
+            </div>
+
+            <div class="small">
+                Swipe through the highlighted
+                area to complete the cut.
+            </div>
+
+
+            <div
+                class="cake-area"
+                id="cakeArea"
+            >
+
+                <div class="plate"></div>
+
+
+                <div
+                    class="cake"
+                    id="cake"
+                >
+
+                    <div class="cut-line"></div>
+
+                    <div class="layer one"></div>
+
+                    <div class="layer two"></div>
+
+                    <div class="layer three"></div>
+
+
+                    <div class="icing">
+
+                        <div class="drip d1"></div>
+
+                        <div class="drip d2"></div>
+
+                        <div class="drip d3"></div>
+
+                    </div>
+
+
+                    <div class="candle">
+
+                        <div class="flame"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="progress-row">
+
+                <span>
+                    Cut Progress
+                </span>
+
+                <span
+                    class="percent"
+                    id="percent"
+                >
+                    0%
+                </span>
+
+            </div>
+
+
+            <div class="bar">
+
+                <div
+                    class="fill"
+                    id="fill"
+                ></div>
+
+            </div>
+
+
+            <div class="hint">
+                👆 Touch and drag across the cake
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Final message -->
+
+    <div
+        class="overlay"
+        id="done"
+    >
+
+        <div class="wish">
+
+            <div class="big">
+                🎂✨💗
+            </div>
+
+            <h2>
+                Cut Complete!
+            </h2>
+
+            <p>
+                Make a beautiful wish…<br>
+                and may it come true. 🥺❤️
+            </p>
+
+            <button
+                onclick="location.reload()"
+            >
+                Cut Again 🎂
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+
+const area =
+    document.getElementById(
+        "cakeArea"
+    );
+
+const fill =
+    document.getElementById(
+        "fill"
+    );
+
+const percent =
+    document.getElementById(
+        "percent"
+    );
+
+const done =
+    document.getElementById(
+        "done"
+    );
+
+
+let drawing = false;
+
+let progress = 0;
+
+let lastX = null;
+
+let lastY = null;
+
+
+/* Get touch position */
+
+function point(e){
+
+    const r =
+        area.getBoundingClientRect();
+
+    const p =
+        e.touches
+        ? e.touches[0]
+        : e;
+
+    return {
+
+        x:p.clientX-r.left,
+
+        y:p.clientY-r.top
+
+    };
+}
+
+
+/* Update progress */
+
+function update(v){
+
+    progress =
+        Math.min(
+            100,
+            Math.max(
+                progress,
+                v
+            )
+        );
+
+
+    fill.style.width =
+        progress + "%";
+
+
+    percent.textContent =
+        Math.round(progress) + "%";
+
+
+    if(progress >= 100){
+
+        setTimeout(function(){
+
+            done.classList.add(
+                "show"
+            );
+
+        },250);
+
+    }
+
+}
+
+
+/* Drag */
+
+function drag(e){
+
+    if(
+        !drawing ||
+        progress >= 100
+    ){
+        return;
+    }
+
+
+    e.preventDefault();
+
+
+    const p = point(e);
+
+
+    const cakeLeft =
+        area.clientWidth / 2 - 145;
+
+    const cakeRight =
+        area.clientWidth / 2 + 145;
+
+    const cakeTop = 65;
+
+    const cakeBottom = 225;
+
+
+    if(
+
+        p.x >= cakeLeft &&
+
+        p.x <= cakeRight &&
+
+        p.y >= cakeTop &&
+
+        p.y <= cakeBottom
+
+    ){
+
+        if(lastX !== null){
+
+            const distance =
+                Math.hypot(
+                    p.x-lastX,
+                    p.y-lastY
+                );
+
+            update(
+                progress +
+                distance / 2.7
+            );
+
+        }
+
+        else{
+
+            update(
+                progress + 2
+            );
+
+        }
+
+    }
+
+
+    lastX = p.x;
+
+    lastY = p.y;
+
+}
+
+
+/* Touch start */
+
+area.addEventListener(
+    "pointerdown",
+    function(e){
+
+        drawing = true;
+
+        lastX = null;
+
+        lastY = null;
+
+        area.setPointerCapture?.(
+            e.pointerId
+        );
+
+    }
+);
+
+
+/* Touch move */
+
+area.addEventListener(
+    "pointermove",
+    drag
+);
+
+
+/* Touch end */
+
+area.addEventListener(
+    "pointerup",
+    function(){
+
+        drawing = false;
+
+        lastX = null;
+
+        lastY = null;
+
+    }
+);
+
+
+area.addEventListener(
+    "pointercancel",
+    function(){
+
+        drawing = false;
+
+    }
+);
+
+</script>
+
+</body>
+</html>
